@@ -13,11 +13,12 @@ def send_message(text):
     else:
         print("❌ Failed to send message:", response.text)
 
-def generate_signal():
-    # Placeholder for real logic — replace later with AI/trading model
-    return "BUY XAUUSD NOW 📈"
+def main():
+    send_message("🚀 Bot is now live and connected successfully!")
 
-while True:
-    signal = generate_signal()
-    send_message(signal)
-    time.sleep(60)
+    # Keep the bot running (avoid Render auto shutdown)
+    while True:
+        time.sleep(60)
+
+if __name__ == "__main__":
+    main()
